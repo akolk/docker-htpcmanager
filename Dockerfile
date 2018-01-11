@@ -18,7 +18,7 @@ RUN rm -rf /var/cache/apk/*
 RUN \
  echo "**** install pip packages ****" && \
  pip install --no-cache-dir -U \
-	cherrypy && \
+	cherrypy psutil && \
  echo "**** install app ****" && \
  git clone --depth 1 https://github.com/Hellowlol/HTPC-Manager.git /app/htpcmanager && \
  echo "**** cleanup ****" && \
