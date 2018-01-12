@@ -20,7 +20,7 @@ RUN apk add --update --no-cache \
     jpeg-dev \
     zlib-dev \
     python-dev \
-    && pip install cherrypy psutil Pillow \
+    && pip install --no-cache-dir cherrypy psutil Pillow \
     && apk del .build-deps \
     && rm -rf /var/cache/apk/*
 
