@@ -1,4 +1,4 @@
-FROM python:2.7-slim
+FROM python:2.7
 
 # set version label
 ARG BUILD_DATE
@@ -8,16 +8,14 @@ LABEL maintainer="carlosedp"
 # set python to use utf-8 rather than ascii
 ENV PYTHONIOENCODING="UTF-8"
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends gcc and-build-dependencies \
-    && rm -rf /var/lib/apt/lists/* \
-    && pip install --no-cache-dir -U  cherrypy psutil \
-    && apt-get purge -y --auto-remove gcc and-build-dependencies
+RUN apt-get update && \
+    apt-get install -y git vnstat python-pip && \
+    pip install cherrypy psutil Pillow && \
+    rm -rf /var/lib/apt/lists/* && \
+    apt-get purge -y --auto-remove python-pip
 
 RUN \
- echo "**** install app ****" && \
  git clone --depth 1 https://github.com/Hellowlol/HTPC-Manager.git /app/htpcmanager && \
- echo "**** cleanup ****" && \
  rm -rf \
 	/root/.cache \
 /tmp/*
