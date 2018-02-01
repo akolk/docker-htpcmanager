@@ -1,12 +1,18 @@
-FROM python:2.7-alpine3.7
+ARG target=amd64
+FROM $target/alpine
 
 # set version label
-ARG BUILD_DATE
-ARG VERSION
 LABEL maintainer="carlosedp"
+
+ARG arch=amd64
+ENV ARCH=$arch
 
 # set python to use utf-8 rather than ascii
 ENV PYTHONIOENCODING="UTF-8"
+# > At the moment, setting "LANG=C" on a Linux system *fundamentally breaks Python 3*, and that's not OK.
+ENV LANG C.UTF-8
+
+COPY .blank tmp/qemu-$ARCH-static* /usr/bin/
 
 ENV LIBRARY_PATH=/lib:/usr/lib
 
