@@ -17,6 +17,7 @@ COPY .blank tmp/qemu-$ARCH-static* /usr/bin/
 ENV LIBRARY_PATH=/lib:/usr/lib
 
 RUN apk add --update --no-cache \
+    python2 \
     git \
     vnstat \
     && apk add --update --no-cache  --virtual .build-deps \
