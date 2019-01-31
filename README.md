@@ -1,8 +1,8 @@
-[hub]: https://hub.docker.com/r/carlosedp/htpcmanager/
+[hub]: https://hub.docker.com/r/akolk/htpcmanager/
 
-# carlosedp/htpcmanager
+# akolk/htpcmanager
 
-[![Build Status](https://travis-ci.org/carlosedp/docker-htpcmanager.svg?branch=master)](https://travis-ci.org/carlosedp/docker-htpcmanager) [![](https://images.microbadger.com/badges/image/carlosedp/htpcmanager.svg)](https://microbadger.com/images/carlosedp/htpcmanager "Get your own image badge on microbadger.com")
+[![Build Status](https://travis-ci.org/akolk/docker-htpcmanager.svg?branch=master)](https://travis-ci.org/carlosedp/docker-htpcmanager) [![](https://images.microbadger.com/badges/image/akolk/htpcmanager.svg)](https://microbadger.com/images/akolk/htpcmanager "Get your own image badge on microbadger.com")
 
 Htpcmanager, a front end for many htpc related applications. Hellowlol version.[Htpcmanager](https://github.com/Hellowlol/HTPC-Manager)
 
